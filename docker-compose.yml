@@ -1,12 +1,12 @@
 services:
   bootcamp-postgres-compose:
-    image: postgres
+    image: postgres:17
     environment:
       POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
     ports:
       - "15432:5432"
     volumes:
-      - /home/ddeiro/personal/bootcamp-sql/PostgreSQL:/var/lib/postgresql/data 
+      - ./PostgreSQL:/var/lib/postgresql/data 
     networks:
       - postgres-compose-network
       
